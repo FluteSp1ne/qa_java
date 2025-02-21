@@ -25,9 +25,11 @@ public class FelineTestParameterized {
     }
 
     @Test
-    public void testGetKittens() {
+    public void testGetKittensWithCount() {
         Feline feline = new Feline();
         assertEquals(expectedKittens, feline.getKittens(kittensCount));
     }
+
+
 
 }

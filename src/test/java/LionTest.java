@@ -1,6 +1,7 @@
 import com.example.FelineInterface;
 import com.example.Lion;
 import org.junit.Test;
+
 import java.util.List;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
@@ -23,5 +24,11 @@ public class LionTest {
         when(felineMock.getFood("Хищник")).thenReturn(expectedFood);
         Lion lion = new Lion("Самец", felineMock);
         assertEquals(expectedFood, lion.getFood());
+    }
+    @Test
+    public void testDoesHaveMane() throws Exception {
+        FelineInterface felineMock = mock(FelineInterface.class);
+        Lion lion = new Lion("Самка", felineMock);
+        assertEquals(false, lion.doesHaveMane());
     }
 }

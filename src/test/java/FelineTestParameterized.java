@@ -29,7 +29,4 @@ public class FelineTestParameterized {
         Feline feline = new Feline();
         assertEquals(expectedKittens, feline.getKittens(kittensCount));
     }
-
-
-
 }

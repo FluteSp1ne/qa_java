@@ -25,10 +25,17 @@ public class LionTest {
         Lion lion = new Lion("Самец", felineMock);
         assertEquals(expectedFood, lion.getFood());
     }
+
     @Test
     public void testDoesHaveMane() throws Exception {
         FelineInterface felineMock = mock(FelineInterface.class);
         Lion lion = new Lion("Самка", felineMock);
         assertEquals(false, lion.doesHaveMane());
+    }
+
+    @Test(expected = Exception.class)
+    public void testDoesHaveManeException() throws Exception {
+        FelineInterface felineMock = mock(FelineInterface.class);
+        new Lion("Кракозябра", felineMock);
     }
 }
